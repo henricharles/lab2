@@ -14,10 +14,17 @@ import service.OrderService;
 public class ProductController {
 	@Autowired
 	OrderService productService;
-	@RequestMapping(value="/products")
+	@RequestMapping(value="/")
 	public String getAllProduct(Model model){
 	List<Product> products= productService.getAllProducts();
 	model.addAttribute("products",products);
 	return "products";
 }
+//	@RequestMapping(value="/products")
+//	public String getAllProduct1(Model model){
+//	List<Product> products= productService.getAllProducts();
+//	model.addAttribute("products",products);
+//	return "products";
+//}
+	
 }

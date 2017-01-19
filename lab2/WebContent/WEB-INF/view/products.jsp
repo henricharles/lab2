@@ -8,12 +8,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-<c:forEach items="${products}" var="product">
+<c:forEach items="${products}" var="product"> 
 		<div class="boxed">
 			<h3>${ product.name}</h3>
-			<p>${ product.description}</p>
-			<p>${ product.unitPrice}USD</p>
+			<p>${ product.description} 
+			<p>Price ${ product.unitPrice}USD</p>
 			<p>Availabe ${ product.unitsInStock} units in stock</p>
+			<a href="${pageContext.request.contextPath}${("/detail/").concat(product.productId).concat("/").concat(product.unitPrice)}">view detail</a>
+			<a href="${pageContext.request.contextPath}${("/order/").concat(product.productId).concat("/").concat(product.unitPrice)}">Order</a>
+			<hr>
+			
+
 		</div>
 	</c:forEach>
 </body>

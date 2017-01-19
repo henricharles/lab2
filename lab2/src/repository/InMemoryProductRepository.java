@@ -22,23 +22,39 @@ public class InMemoryProductRepository  implements ProductRepository{
 	
 		Product product1= new Product();
 		Product product2= new Product();
+		Product product3= new Product();
 
 		product1.setCategory("mobile");
 		product1.setCondition("new");
 		product1.setManufacturer("SamSung");
 		product1.setProductId("s11");
 		product1.setName("s7");
+		product1.setUnitsInOrder(20);
 		product1.setUnitPrice(new BigDecimal(500));
 		
 		product2.setCategory("mobile");
 		product2.setCondition("new");
 		product2.setManufacturer("mac");
-		product2.setProductId("iphon11");
-		product2.setName("Iphone7");
+		product2.setProductId("ipho2");
+		product2.setName("Iphone5");
 		product2.setUnitPrice(new BigDecimal(1600));
+		product2.setUnitsInStock(20);
+		
+		
+		
+		product3.setCategory("mobile");
+		product3.setCondition("new");
+		product3.setManufacturer("windows");
+		product3.setProductId("noki1");
+		product3.setName("Nokia Lumia");
+		product3.setUnitPrice(new BigDecimal(120));
+		product3.setUnitsInStock(12);
+		
+		listOfProduct.add(product3);
 		listOfProduct.add(product1);
 		listOfProduct.add(product2);
 		return listOfProduct;
+		
 }
 	
 
